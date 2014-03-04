@@ -1,0 +1,14 @@
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+# It may be necessary to uncomment and modify this line if installing in a subdirectory.
+#RewriteBase / 
+
+# Redirect anything that isn't a real file to our example page handler
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^(.*)$ example_page_handler.php?page=$1 [QSA]
+
+</IfModule>
