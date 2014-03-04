@@ -42,6 +42,10 @@ Usage
 Once you've created your endpoint handler you should use .htaccess to redirect any unhandled
 requests to your endpoint. See example_htaccess_dist.
 
+Requires
+--------
+* Mod_rewrite
+
 Author
 ------
 
